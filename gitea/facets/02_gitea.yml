@@ -1,0 +1,9 @@
+steps:
+  - run:
+    - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
+    - pkg install gitea
+    - service enable gitea
+  - copy:
+      - [ configs/app.ini, /usr/local/www/gitea/config/app.ini ]
+  - run:
+      - service gitea reload

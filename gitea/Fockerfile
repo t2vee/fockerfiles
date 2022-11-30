@@ -1,0 +1,6 @@
+base: freebsd-latest
+
+facets:
+  - ./facets/01_postgres.yml
+  - ./facets/02_gitea.yml
+  - ./facets/03_nginx.yml
