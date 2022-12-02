@@ -1,0 +1,10 @@
+steps:
+  - run:
+    - mkdir /usr/ports-custom
+    - cd /usr/ports-custom
+    - git init
+    - git remote add -f origin https://github.com/HardenedBSD/ports
+    - echo "www/mediawiki138/" >> .git/info/sparse-checkout
+    - git pull origin master
+    - cd www/mediawiki138
+    - 
