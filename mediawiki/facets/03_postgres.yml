@@ -1,5 +1,0 @@
-steps:
-  - run:
-    - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
-    - pkg install postgres13-server postgres13-client
-    - service enable postgres
