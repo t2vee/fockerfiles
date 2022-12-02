@@ -1,0 +1,4 @@
+steps:
+  - run:
+    - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
+    - pkg install git inkscape
