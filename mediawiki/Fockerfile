@@ -2,7 +2,7 @@ base: freebsd-latest
 
 facets:
   - ./facets/01_dependencies.yml
-  - ./facets/02_php.yml
-  - ./facets/03_postgres.yml
+  - ./facets/02_postgres.yml
+  - ./facets/03_mediawiki.yml
   - ./facets/04_nginx.yml
-  - ./facets/05_mediawiki.yml
+  - ./facets/05_extras.yml
