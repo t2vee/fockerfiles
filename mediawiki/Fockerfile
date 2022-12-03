@@ -1,4 +1,4 @@
-base: freebsd-latest
+base: hardenedbsd-latest
 
 facets:
   - ./facets/01_dependencies.yml
