@@ -1,0 +1,4 @@
+steps:
+  - run:
+    - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
+    - pkg install node16-16.18.1 npm-node16-8.19.2 git
