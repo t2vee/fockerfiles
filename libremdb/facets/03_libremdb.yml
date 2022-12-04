@@ -1,0 +1,11 @@
+steps:
+  - run:
+    - cd /usr/local/
+    - git clone https://codeberg.org/zyachel/libremdb.git
+    - cd libremdb
+  - copy:
+    - [ configs/.env.local, /usr/local/libremdb/env.local ]
+  - run:
+    - npm install
+    - npm build
+    - npm start
