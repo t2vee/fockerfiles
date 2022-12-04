@@ -1,0 +1,7 @@
+base: freebsd-latest
+
+facets:
+  - ./facets/01_nodejs.yml
+  - ./facets/02_redis.yml
+  - ./facets/03_libremdb.yml
+  - ./facets/04_nginx.yml
