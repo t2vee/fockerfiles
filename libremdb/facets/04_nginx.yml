@@ -2,7 +2,7 @@ steps:
   - run:
     - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
     - pkg install nginx
-    - sysrc nginx_enable=yes
+    - service enable nginx
   - copy:
       - [ configs/nginx.conf, /usr/local/etc/nginx.conf ]
   - run:
