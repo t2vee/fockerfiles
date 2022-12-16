@@ -1,0 +1,5 @@
+base: freebsd-latest
+
+facets:
+  - ./facets/01_garage.yml
+  - ./facets/02_nginx.yml

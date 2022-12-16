@@ -1,0 +1,10 @@
+steps:
+  - run:
+    - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
+    - pkg install postgres13-server postgres13-client
+    - sysrc postgresql_enable=yes
+    - service postgresql initdb
+    - service postgresql start
+    - su -m postgres -c psql -c "alter user postgres with password '${{ POSTGRES_ROOT_PASSWORD }}'"
+    - su -m postgres -c createuser synapseuser
+    - su -m postgres -c createdb --encoding=UTF8 --locale=C --template=template0  synapse -O synapseuser

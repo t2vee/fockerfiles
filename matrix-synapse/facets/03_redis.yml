@@ -1,0 +1,6 @@
+steps:
+  - run:
+    - export IGNORE_OSVERSION=yes ASSUME_ALWAYS_YES=yes
+    - pkg install redis
+    - sysrc redis_enable=yes
+    - service redis start

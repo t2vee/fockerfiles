@@ -1,0 +1,33 @@
+images:
+  gitea: /usr/fockerfiles/garage
+
+jails:
+  gitea:
+    image: garage
+    env:
+      SITE_NAME: Test site
+    mounts:
+      gitea-config: /mnt/gitea-config
+      db-data: /mnt/db-data
+    ip4.addr: 127.0.1.1
+    interface: lo1
+
+volumes:
+  gitea-config: {}
+  db-data: {}
+  db-backup: {}
+
+commands:
+  backup:
+    jail: gitea
+    command: |
+      mysqldump >/mnt/db-data/backup.sql
+    mounts:
+      db-backup: /mnt/backup
+
+  restore:
+    jail: gitea
+    command: |
+      mysql </mnt/db-data/backup.sql
+    mounts:
+      db-backup: /mnt/backup
