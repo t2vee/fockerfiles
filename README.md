@@ -1,3 +1,8 @@
+# THIS PROJECT HAS BEEN ARCHIVED
+## This is due to 
+### - the transition to the pot container management project - https://github.com/bsdpot/pot
+### - lack of development on focker althogether
+
 # fockerfiles
 
 fockerfiles for all your favorite projects
